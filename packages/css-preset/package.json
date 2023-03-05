@@ -1,0 +1,41 @@
+{
+  "name": "css-preset",
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
+    "build": "unbuild",
+    "stub": "unbuild --stub"
+  },
+  "keywords": [
+    "unocss",
+    "unocss-preset"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "*.css"
+  ],
+  "devDependencies": {
+    "tsconfig": "workspace:*",
+    "@unocss/core": "0.50.3",
+    "@unocss/nuxt": "0.50.3",
+    "@unocss/preset-mini": "0.50.3",
+    "@unocss/preset-wind": "0.50.3",
+    "@unocss/reset": "0.50.3",
+    "typescript": "4.9.5",
+    "unbuild": "1.1.2",
+    "unocss": "0.50.3",
+    "vite": "4.1.4"
+  }
+}
